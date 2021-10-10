@@ -1,0 +1,250 @@
+body {
+    background-color:#00002a;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#loader{
+    position:absolute ;
+    top:50%;
+    left:50%;
+    width:140px;
+    transform:translate(-50%, -50%);
+}
+#loader .pair{
+    position:absolute;
+    width:60px;
+    height:10px;
+}
+#loader .pair .dot{
+    position:absolute ;
+    width:10px;
+    height:10px;
+    background-color:#fefcf6;
+    border-radius:50%;
+}
+#loader .pair .dot-2{
+    right:0;
+}
+#loader .pair-2{
+    left:50px;
+}
+#loader .pair-1{
+    animation:move 1000ms ease-in-out infinite;
+}
+#loader .pair-2{
+    animation:move 1000ms ease-in-out infinite reverse;
+}
+@keyframes move{
+    0%{
+        transform:rotate(0deg);
+    }
+    50%,100%{
+        transform:rotate(180deg);
+    }
+}
+#loader .pair-1 .dot-1{
+    animation:hide 1000ms ease-in-out infinite reverse;
+    opacity:0;
+}
+#loader .pair-2 .dot-2{
+    animation:hide 1000ms ease-in-out infinite;
+    opacity:0;
+}
+@keyframes hide{
+    0%,49%{
+        opacity:0;
+    }
+    50%,100%{
+        opacity:1;
+    }
+}
+.text{
+    position:absolute ;
+    margin-top:60%;
+    left:50%;
+    font-size:50px;
+    transform:translate(-50%,-50%);
+    color:#fefcf6;
+    font-family:courier new;
+}
+#android{
+    position:absolute ;
+    top:200px;
+    left:40%;
+    transform:translate(-50%, -50%);
+    font-size:20px;
+    color:#43A047;
+}
+#apple{
+    position:absolute ;
+    top:200px;
+    left:60%;
+    transform:translate(-50%, -50%);
+    font-size:20px;
+    color:#CFD8DC;
+}
+#copyright{
+    position:absolute ;
+    top:230px;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:10px;
+    font-family:courier new;
+    color:#CFD8DC;
+}
+#loader{
+    display:block;
+}
+
+#app{
+    display:none;
+}
+.header{ 
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    justify-content: space-around;
+    color: white; 
+    margin-top: 5vh;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.song-details{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.act-img{
+    width:260px;
+    height: 260px;
+    border: 1px solid #154360;
+    box-shadow: 0px 0px 10px 1px black;
+    border-radius:50%;
+}
+#song-name, #artist-name{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    font-family:courier new;
+}
+#song-name{
+    font-weight: bolder;
+    position:absolute ;
+    top:60%;
+    margin-bottom: 5px;
+    font-size:35px;
+}
+#artist-name{
+    position:absolute ;
+    top:65%;
+    color: #fefcf6;
+    font-size: 20px;
+    }
+.button-control{
+    width: 100%;
+    position:absolute ;
+    height: 20vh;
+    display: flex;
+    top:90%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    justify-content: space-around;
+    align-items: center;
+}
+#prev{
+    position:absolute ;
+    font-size:40px;
+    color:#fefcf6;
+    margin-left:-20%;
+}
+#next{
+    position:absolute ;
+    font-size:40px;
+    color:#fefcf6;
+    margin-left:20%;
+}
+#fav{
+    position:absolute ;
+    font-size:20px;
+    color:#fff;
+    margin-left:40%;
+}
+#play{
+    position:absolute ;
+    font-size:40px;
+    color:#fefcf6;
+    margin-left:0%;
+}
+#shuffle{
+    position:absolute ;
+    font-size:20px;
+    color:#fefcf6;
+   margin-left:-40%;
+}
+.bg-img{
+    position:absolute ;
+    top:0;
+    left:0;
+    height:auto;
+    width:100%;
+    z-index:-10;
+}
+.song-pic{
+    position:absolute ;
+    top:20%;
+}
+
+               /*SIDEBAR*/
+#Sidebar{
+    position:absolute;
+    width: 200px;
+    height:100%;
+    background-color:#00002a; 
+    left: -200px;
+    transition: all 500ms linear;
+    top:2%;
+    font-family:courier new;
+    display:flex;
+}
+
+#Sidebar.active{
+    left: 0px;
+}
+
+#Sidebar .Tg_Button{
+    position:absolute;
+    left: 210px;
+    top: 10px;
+    background-color:none;
+    
+}
+
+#Sidebar .Tg_Button span{
+    display: block;
+    color: #fefcf6;
+    background-color:transparent;
+    border-radius:50%;
+}
+#Sidebar ol li {
+    color:#fefcf6;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3)
+}  
+#about{
+    position:absolute ;
+    top:3%;
+    left:93%;
+    color:#fefcf6;
+    font-size:25px;
+}
